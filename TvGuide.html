@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Go</title>
+    <link rel="icon" type="image/x-icon" href="./images/apex-go-icon.ico" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <!-- <script src="https://cdn.jwplayer.com/libraries/aLvnjuWO.js"></script>
+    <script>jwplayer.key="{o2TAWvE5}"</script>
+    <script type="text/JavaScript">
+      jwplayer("myElement").setup({ 
+          "playlist": [{
+              "file": "{https://cdn.jwplayer.com/videos/cBYby9Hn-zrD8Vo5Q.mp4}"
+          }]
+      }); 
+   </script> -->
+  </head>
+  <body>
+    <!--------------------- Main Display------------------ -->
+    <div class="container-fluid-custom">
+      <div class="row-custom">
+        <!-- TV Guide Sidebar -->
+        <div class="sidebar d-flex flex-column" id="sidebar">
+          <div class="d-flex justify-content-start mt-3">
+            <div class="back_btn">
+              <a href="./index.html"> <i class="far fa-chevron-left"></i></a>
+            </div>
+            <div class="home_btn">
+              <a href="./index.html"> <i class="fas fa-home-lg"></i></a>
+            </div>
+
+            <i class="far fa-search ms-auto fs-5 me-2"></i>
+
+            <div id="menu_icon" class="menu_icon ms-auto">
+              <i class="far fa-bars fs-5 me-2"></i>
+            </div>
+            <div id="close_icon" class="close_icon">
+              <i class="far fa-times fs-5 mx-3"></i>
+            </div>
+          </div>
+          <h4 class="tv_guide_heading_sidebar">TV Guide</h4>
+          <div class="sidebar_content sidebar_content_scroll mb-auto">
+            <ul class="list-group">
+              <li>
+                <a href="">All Channels</a>
+              </li>
+              <li><a href="">HD</a></li>
+              <li><a href="">Entertainments</a></li>
+              <li><a href="">Documentries</a></li>
+              <li><a href="">Movies</a></li>
+              <li><a href="">Sports</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Kids</a></li>
+              <li><a href="">Music</a></li>
+              <li><a href="">Shopping</a></li>
+              <li><a href="">Religion</a></li>
+              <li><a href="">International</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="./images/Apex_Light_RGB.png" alt="" class="apex_image" />
+          </div>
+        </div>
+
+        <!------------- Search bar------------ -->
+        <input
+          class="search_bar"
+          placeholder="Search fo TV shows, actors, movies or events"
+        />
+
+        <!-- TV Guide Right Side Panel -->
+        <div
+          class="right-side-panel p-0 ms-auto tv_guide_right_side_panel"
+          id="right_side_panel"
+        >
+          <!-- Video Section TV Guide  -->
+          <div
+            class="d-flex flex-column flex-md-row justify-content-start ms-3 ms-sm-4 ms-lg-5 py-2 py-md-5 tv_guide_showcase"
+          >
+            <div id="myElement" class="video_thumbnail">
+              <iframe
+                src="https://cdn.jwplayer.com/videos/cBYby9Hn-zrD8Vo5Q.mp4"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div
+              class="video_info d-flex flex-column justify-content-start ms-md-3 mt-2 mt-md-0 text-white"
+            >
+              <h4>Good Morning Britian</h4>
+              <p class="p-0 m-0">News, current affairs and lively debate</p>
+              <span class="p-0 m-0">
+                <span class="quality_tag">SD</span> 3h 6:00am to 9:00am</span
+              >
+              <div class="record_btn fw-bold my-3">
+                <span>R</span> Record
+                <div class="record_btn_tooltip">
+                  <p>Record once on Sky box</p>
+                  <p>Record series on Sky box</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!----- Shows Schedule Section ----->
+          <div class="show_schedule_container">
+            <!-------------- Watch Mode ------------->
+            <div
+              class="watch_mode d-flex justify-content-center align-items-center"
+            >
+              <div
+                class="watch_mode-btn_container d-flex justify-content-center align-items-center"
+              >
+                <div class="watch_mode_btn btn_clicked">Watch on computer</div>
+                <div class="record_mode_btn">Record on Apex box</div>
+              </div>
+            </div>
+
+            <!---------------- Schedule Section---------------->
+            <!------------ Columns header ------------->
+            <div class="columns_headings">
+              <div class="channels_heading">Today</div>
+              <div class="shows_heading_outer_container">
+                <div class="shows_heading_inner_container">
+                  <div>7:00 am</div>
+                  <div>7:30 am</div>
+                  <div>8:00 am</div>
+                  <div>8:30 am</div>
+                  <div>9:00 am</div>
+                  <div>9:30 am</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="show_schedule_section watch_computer_table">
+              <div class="left_btn"><i class="far fa-chevron-left"></i></div>
+              <div class="right_btn"><i class="far fa-chevron-right"></i></div>
+              <div class="channels_col">
+                <ul class="list-group">
+                  <li>Channel 4 104</li>
+                  <li>Channel 4 104</li>
+                  <li>Channel 5 105</li>
+                  <li>SkyShowcaseHD 106</li>
+                  <li>Sky Witness HD 107</li>
+                  <li>Sky Atlantic 108</li>
+                  <li>alibi HD 109</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                  <li>alibi HD 109</li>
+                  <li>Gold HD 120</li>
+                  <li>Gold HD 130</li>
+                  <li>Gold HD 140</li>
+                </ul>
+              </div>
+              <div class="shows_outer_container">
+                <div class="shows_inner_container">
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="show_schedule_section record_apexbox_table">
+              <div class="left_btn"><i class="far fa-chevron-left"></i></div>
+              <div class="right_btn"><i class="far fa-chevron-right"></i></div>
+              <div class="channels_col">
+                <ul class="list-group">
+                  <li>Channel 4 104</li>
+                  <li>Channel 4 104</li>
+                  <li>Channel 5 105</li>
+                  <li>SkyShowcaseHD 106</li>
+                  <li>Sky Witness HD 107</li>
+                  <li>Sky Atlantic 108</li>
+                  <li>alibi HD 109</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                  <li>alibi HD 109</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                  <li>Gold HD 110</li>
+                </ul>
+              </div>
+              <div class="shows_outer_container">
+                <div class="shows_inner_container">
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                  <div class="shows_rows">
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                    <div>Harry Porter</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Weekdays Bar -->
+            <div class="weekdays_bar">
+              <div>Today</div>
+              <div>Fri 07</div>
+              <div>Sat 08</div>
+              <div>Sun 09</div>
+              <div>Mon 10</div>
+              <div>Tue 11</div>
+              <div>Wed 12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./javascript/javascript.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // For Shows Slider
+      const left_btn = document.querySelector(".left_btn");
+      const right_btn = document.querySelector(".right_btn");
+      const shows_inner_container = document.querySelector(
+        ".shows_inner_container"
+      );
+      const shows_outer_container = document.querySelector(
+        ".shows_outer_container"
+      );
+      const shows_heading_inner_container = document.querySelector(
+        ".shows_heading_inner_container"
+      );
+
+      left_btn.addEventListener("click", onleft);
+
+      right_btn.addEventListener("click", onright);
+
+      var width = 0;
+      function onright() {
+        const style = getComputedStyle(shows_outer_container);
+        var position = getComputedStyle(shows_inner_container);
+        var matrix = new WebKitCSSMatrix(position.transform);
+
+        if (
+          parseInt(position.width) - parseInt(style.width) >
+          Math.abs(matrix.m41)
+        ) {
+          width += parseInt(style.width);
+          shows_inner_container.style.transform = `translate(${-width + "px"})`;
+          shows_heading_inner_container.style.transform = `translate(${
+            -width + "px"
+          })`;
+        }
+      }
+
+      function onleft() {
+        const style = getComputedStyle(shows_outer_container);
+        var position = getComputedStyle(shows_inner_container);
+        var matrix = new WebKitCSSMatrix(position.transform);
+        if (0 != Math.abs(matrix.m41)) {
+          width -= parseInt(style.width);
+          shows_inner_container.style.transform = `translate(${-width + "px"})`;
+          shows_heading_inner_container.style.transform = `translate(${
+            -width + "px"
+          })`;
+        }
+      }
+      const record_apexbox_table = document.querySelector(
+        ".record_apexbox_table"
+      );
+      const watch_computer_table = document.querySelector(
+        ".watch_computer_table"
+      );
+      const watch_mode_btn = document.querySelector(".watch_mode_btn");
+      watch_mode_btn.addEventListener("click", () => {
+        watch_mode_btn.classList.add("btn_clicked");
+        record_mode_btn.classList.remove("btn_clicked");
+        watch_computer_table.style.display = "";
+        record_apexbox_table.style.display = "none";
+      });
+      const record_mode_btn = document.querySelector(".record_mode_btn");
+      record_mode_btn.addEventListener("click", () => {
+        record_mode_btn.classList.add("btn_clicked");
+        watch_mode_btn.classList.remove("btn_clicked");
+        watch_computer_table.style.display = "none";
+        record_apexbox_table.style.display = "flex";
+      });
+
+      const record_btn_tooltip = document.querySelector(".record_btn_tooltip");
+      const record_btn_tooltip2 = document.querySelector(".record_btn_tooltip2");
+      const record_btn = document.querySelector(".record_btn");
+      record_btn.addEventListener("click", () => {
+        if (record_btn_tooltip.classList.contains("record_btn_tooltip2")) {
+          record_btn_tooltip.classList.remove("record_btn_tooltip2");
+        } else {
+          record_btn_tooltip.classList.add("record_btn_tooltip2");
+        }
+      });
+    </script>
+  </body>
+</html>

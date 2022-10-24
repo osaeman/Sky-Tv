@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apex Go</title>
+    <link rel="icon" type="image/x-icon" href="./images/apex-go-icon.ico" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!--------------------- Main Display------------------ -->
+    <div class="container-fluid-custom">
+      <div class="row-custom">
+        <!-- Sky Cinema Sidebar -->
+        <div class="sidebar d-flex flex-column" id="sidebar">
+          <div class="d-flex justify-content-start mt-3">
+            <div class="back_btn">
+              <a href="./index.html"> <i class="far fa-chevron-left"></i></a>
+            </div>
+            <div class="home_btn">
+              <a href="./index.html"> <i class="fas fa-home-lg"></i></a>
+            </div>
+
+            <i class="far fa-search ms-auto fs-5 me-2"></i>
+
+            <div class="menu_icon ms-auto" id="menu_icon">
+              <i class="far fa-bars fs-5 me-2"></i>
+            </div>
+            <div class="close_icon" id="close_icon">
+              <i class="far fa-times fs-5 mx-3"></i>
+            </div>
+          </div>
+          <h4 class="tv_guide_heading_sidebar">Apex Cinema</h4>
+          <div class="sidebar_content sidebar_content_scroll mb-auto">
+            <ul class="list-group">
+              <li>
+                <a href="">Top picks</a>
+              </li>
+              <li><a href="">Must-see movies</a></li>
+              <li><a href="">Are you ready for an adventure?</a></li>
+              <li><a href="">New to Apex Cinema</a></li>
+              <li><a href="">Movie collections</a></li>
+              <li><a href="">Browse actors</a></li>
+              <li><a href="">Browse genres</a></li>
+              <li><a href="">Ultra HD</a></li>
+              <li><a href="">For you</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="./images/Apex_Light_RGB.png" alt="" class="apex_image" />
+          </div>
+        </div>
+
+        <!------------- Search bar------------ -->
+        <input
+          class="search_bar"
+          placeholder="Search fo TV shows, actors, movies or events"
+        />
+
+        <!------------- Apex Cinema Right Side Panel ----------->
+        <div class="right-side-panel p-0 ms-auto" id="right_side_panel">
+          <!----------------- Movie Showcase-------------->
+          <div class="movie_showcase_outer_container">
+            <div class="movie_showcase_inner_container">
+              <div class="gradient"></div>
+              <img src="./images/image 1.jpg" alt="" />
+              <div class="movie_showcase_content">
+                <img src="./images/Sky Arts SECONDARY RGB.png" alt="" />
+                <h2>Uncharted</h2>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled.
+                </p>
+                <div class="play_mode_tags">
+                  <span>12</span>
+                  <span>HD</span>
+                  <span>S</span>
+                  <small>1h 51m</small>
+                </div>
+                <div class="movie_showcase_content_btns">
+                  <div class="play-btn">
+                    <i class="far fa-play-circle"></i> Play
+                  </div>
+                  <div class="download_btn">
+                    <i class="far fa-arrow-alt-circle-down"></i>Download
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!---------------- Movies Collection Section ------------------->
+          <div class="movies_collection_container">
+            <div class="movies_collection_flexbox">
+              <div>
+                <img src="./images/movieposter1.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter2.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter3.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter4.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter5.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter6.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter1.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter2.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter3.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter4.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter5.PNG" alt="" />
+              </div>
+              <div>
+                <img src="./images/movieposter6.PNG" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./javascript/javascript.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

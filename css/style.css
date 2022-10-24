@@ -1,0 +1,1178 @@
+/* ----------------------------General Styling-------------------------- */
+@font-face {
+  font-family: "skyFont";
+  src: url(../fonts/sky-text-regular.ttf);
+  src: url(../fonts/sky-text-medium.ttf);
+}
+* {
+  font-family: "skyFont", sans-serif;
+}
+:root {
+  --swiper-theme-color: white !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+ul li {
+  list-style: none !important;
+}
+
+/* -----Scrollbar----- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  scroll-behavior: smooth;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #609eeb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #84b8f8;
+}
+
+/* -------------Layout---------- */
+.container-fluid-custom {
+  width: 100%;
+  background: hsla(209, 100%, 43%, 1);
+  background: linear-gradient(
+    -45deg,
+    hsla(212, 100%, 22%, 1) 0%,
+    hsla(209, 100%, 43%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    -45deg,
+    hsla(209, 100%, 43%, 1) 0%,
+    hsla(212, 100%, 22%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    -45deg,
+    hsla(209, 100%, 43%, 1) 0%,
+    hsla(212, 100%, 22%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#006fda", endColorstr="#00336f", GradientType=1 );
+}
+
+.custom-row {
+  display: flex;
+}
+
+/* --------------Sidebar----------- */
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 250px;
+  border-right: 6px solid;
+  border-image: linear-gradient(
+      360deg,
+      rgb(0, 111, 218) 0%,
+      rgb(0, 111, 218) 25%,
+      rgb(14, 137, 255) 35%,
+      rgb(0, 86, 166) 45%,
+      rgb(0, 85, 167) 85%,
+      rgb(14, 137, 255) 100%
+    )
+    1;
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 20px 20px 40px #042f57;
+  z-index: 10;
+}
+
+.fa-search {
+  cursor: pointer;
+}
+
+.search_bar {
+  border: 4px solid;
+  border-image: linear-gradient(45deg, #97cbff, rgb(6, 65, 124), #5292d3) 1;
+  outline: none;
+  padding: 12px 20px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  position: fixed;
+  z-index: 10;
+  left: 250px;
+  width: 35%;
+  display: none;
+}
+.current_page {
+  font-weight: bold;
+}
+.apex_go_heading_sidebar {
+  visibility: hidden;
+}
+.menu_icon {
+  cursor: pointer;
+  display: none;
+}
+.close_icon {
+  cursor: pointer;
+  display: none;
+}
+.menu_icon2 {
+  display: block;
+}
+.close_icon2 {
+  display: block;
+}
+.sidebar_content ul li {
+  padding: 8px 17px !important;
+  font-size: 18px;
+}
+.sidebar_content ul li a:hover {
+  font-weight: bold;
+}
+.apex_image {
+  height: 95px;
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+/* -----------right-side---------------- */
+.right-side-panel {
+  width: calc(100% - 250px);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+/* ----------Hero Image Swiper------------ */
+.hero_image_swiper_outer_container {
+  width: 100%;
+  height: 400px;
+}
+.hero_image_swiper_container {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+
+.image_swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.image_swiper_flexbox {
+  position: relative;
+}
+.hero_swiper_slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.image_swiper_content {
+  padding: 20px 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  color: white;
+  width: 45%;
+}
+.image_swiper_content img {
+  width: 80px;
+  height: 20px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+}
+.image_swiper_content h2 {
+  font-size: 34px;
+  font-size: bold;
+  line-height: 34px;
+}
+
+.image_swiper_content p {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: fit-content !important;
+  left: calc(100% - 80px) !important;
+  bottom: 70px !important;
+}
+
+.hero_swiper_button_next {
+  right: 25px !important;
+  top: 10% !important;
+}
+
+.hero_swiper_button_prev {
+  left: calc(100% - 85px) !important;
+  top: 10% !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 22px !important;
+}
+
+/* ----------Multiple Image swiper Row 1--------- */
+.multiple_image_swiper_outer_container_1 {
+  transform: translateY(-60px);
+  /* background-color: rgba(3, 67, 138, 0.2); */
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  width: 100%;
+  height: 340;
+  position: relative;
+}
+.multiple_image_swiper_container {
+  width: 92%;
+  height: fit-content;
+  margin: auto;
+  padding: 0 25px 60px 25px;
+  position: relative;
+  overflow: hidden;
+}
+.multiple_image_swiper_container h3 {
+  color: white;
+  font-size: 24px;
+  opacity: 0.9;
+  padding-left: 0px;
+  margin-top: 30px;
+}
+
+.multiple_swiper_slide {
+  margin-top: 3px;
+}
+
+.multiple_swiper_slide a img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  border: 4px solid #0d67ce;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(0 0 0.1rem #93c0f3);
+  transition: all 0.2s ease-in-out;
+  transform: scale(1);
+}
+.multiple_swiper_slide a img:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+.multiple_swiper_slide a {
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.multiple_swiper_slide h5 {
+  color: white;
+  opacity: 0.8;
+  font-size: 15px;
+  width: 360px;
+  margin: auto;
+  margin-top: 7px;
+}
+
+/* ----------Multiple Image Swiper Row 2--------- */
+.multiple_image_swiper_outer_container_2 {
+  transform: translateY(-60px);
+  /* background-color: rgba(3, 67, 138, 0.2); */
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  z-index: 6;
+  width: 100%;
+  height: 340;
+  position: relative;
+}
+
+/*---------------------------- TV GUIDE PAGE-------------------------- */
+/*------------------------ Tv Guide Sidebar------------------ */
+.fa-chevron-left {
+  padding: 0 28px 0 19px;
+}
+.tv_guide_heading_sidebar {
+  padding: 0 17px;
+  margin: 40px 0 20px 0;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.sidebar_content_scroll {
+  height: 57vh;
+  overflow-y: auto;
+}
+
+.sidebar_content_heading {
+  font-size: 22px !important;
+  color: white !important;
+}
+
+/* ------------- TV Guide Right Side Panel ---------------- */
+.tv_guide_right_side_panel {
+  height: 100vh !important;
+}
+.tv_guide_showcase {
+  height: 30vh;
+}
+/* -------Video Section TV Guide ---------- */
+.video_thumbnail iframe {
+  width: 250px;
+  aspect-ratio: 16/9;
+  border: 4px solid;
+  border-image: linear-gradient(
+      360deg,
+      rgb(0, 111, 218) 0%,
+      rgb(0, 111, 218) 25%,
+      rgb(14, 137, 255) 35%,
+      rgb(0, 86, 166) 45%,
+      rgb(0, 85, 167) 85%,
+      rgb(14, 137, 255) 100%
+    )
+    1;
+  cursor: pointer;
+}
+
+.record_btn {
+  padding: 4px 15px;
+  width: fit-content;
+  background-color: #0d67ce;
+  border: 2px solid #84b8f8;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 0.3rem #09315f);
+  cursor: pointer;
+  position: relative;
+  z-index: 9;
+}
+.record_btn:hover {
+  background-color: #2281ec;
+}
+.record_btn_tooltip {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background-color: black;
+  border: 4px solid;
+  border-image: linear-gradient(
+      360deg,
+      rgb(0, 111, 218) 0%,
+      rgb(0, 111, 218) 25%,
+      rgb(14, 137, 255) 35%,
+      rgb(0, 86, 166) 45%,
+      rgb(0, 85, 167) 85%,
+      rgb(14, 137, 255) 100%
+    )
+    1;
+  width: max-content;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+.record_btn_tooltip2{
+  display: flex;
+}
+
+.record_btn_tooltip p {
+  margin: 0;
+  font-weight: normal;
+}
+.record_btn_tooltip p:hover {
+ color: #97cbff;
+}
+.record_btn span {
+  border: 3px solid white;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+}
+
+.quality_tag {
+  font-size: 13px;
+  border: 1px solid white;
+  padding: 0 3px;
+}
+
+/* --------- Shows Schedule Container --------- */
+.show_schedule_container {
+  position: relative;
+}
+
+.watch_mode {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 7px 0;
+  height: 55px;
+}
+.watch_mode-btn_container {
+  background-color: #0b498f;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  padding: 3px 3px;
+  margin: 0 10px;
+}
+.watch_mode-btn_container div {
+  border-radius: 3px;
+  padding: 6px 22px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+}
+.btn_clicked {
+  background-color: white;
+  color: #0b498f;
+}
+
+.columns_headings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.channels_heading {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  height: 45px;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: end;
+  width: 260px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+.shows_heading_outer_container {
+  width: calc(100% - 260px);
+  overflow: hidden;
+}
+.shows_heading_inner_container {
+  display: flex;
+  transform: translateX(0);
+  justify-content: flex-start;
+  align-items: center;
+  width: max-content;
+}
+.shows_heading_inner_container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  height: 45px;
+  width: 300px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+}
+
+.show_schedule_section {
+  height: calc(70vh - 160px);
+  overflow-y: auto;
+}
+.watch_computer_table {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.record_apexbox_table {
+  display: none;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.channels_col {
+  width: 260px;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  box-shadow: 20px 20px 30px rgba(39, 39, 39, 0.4);
+}
+
+.channels_col ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  cursor: pointer;
+  height: 45px;
+  justify-content: end;
+  color: rgba(255, 255, 255, 0.9);
+}
+.channels_col ul li:hover {
+  background-color: #09315f;
+}
+.shows_outer_container {
+  width: calc(100% - 260px);
+  overflow: hidden;
+}
+.shows_inner_container {
+  width: max-content;
+  transform: translateX(0);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.left_btn {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+  position: absolute;
+  left: 280px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.left_btn:hover {
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.right_btn {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.right_btn:hover {
+  background-color: rgb(0, 0, 0, 0.8);
+}
+.shows_rows {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.shows_rows div {
+  height: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  background-clip: padding-box;
+  cursor: pointer;
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+.shows_rows div:hover {
+  background-color: black;
+  border: 3px solid #5292d3;
+}
+
+.weekdays_bar {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b498f;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-clip: padding-box;
+  z-index: 8;
+}
+
+.weekdays_bar div {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  line-height: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 13px 15px;
+  cursor: pointer;
+}
+
+.weekdays_bar div:hover {
+  background-color: #09315f;
+  font-weight: bold;
+}
+
+/*---------------------------- Apex Cinema Page-------------------------- */
+/*------------------------ Apex Cinema Sidebar------------------ */
+.fa-chevron-left {
+  padding: 0 28px 0 19px;
+}
+
+/* <!----------------- Movie Showcase--------------> */
+.movie_showcase_outer_container {
+  width: 100%;
+  height: 400px;
+}
+
+.movie_showcase_inner_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    at 90%,
+    rgba(5, 78, 151, 0),
+    rgba(5, 78, 151, 0.55),
+    rgba(0, 106, 209, 1)
+  );
+  opacity: 1;
+  transition: all 0.4s ease-in;
+}
+.gradient:hover {
+  opacity: 0.7;
+  transition: all 0.4s ease-in;
+}
+.movie_showcase_inner_container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.movie_showcase_content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 30px;
+  top: 20%;
+  width: 45%;
+  color: rgba(255, 255, 255, 1);
+}
+.movie_showcase_content h2 {
+  margin: 19px 0 7px 0;
+  line-height: 27px;
+}
+.movie_showcase_content p {
+  margin: 0;
+  width: 100%;
+}
+.movie_showcase_content img {
+  width: 75px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+.play_mode_tags span {
+  border: 1px solid white;
+  display: inline-block;
+  padding: 0 2px;
+  font-size: 14px;
+}
+
+.play_mode_tags small {
+  font-size: 17px;
+}
+.movie_showcase_content_btns {
+  display: flex;
+  flex-direction: row;
+  margin-top: 12px;
+}
+
+.play-btn {
+  padding: 4px 15px;
+  width: fit-content;
+  background-color: #0d67ce;
+  border: 2px solid #84b8f8;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 0.3rem #09315f);
+  cursor: pointer;
+}
+.play-btn:hover,
+.download_btn:hover {
+  background-color: #2281ec;
+}
+.download_btn {
+  padding: 4px 15px;
+  width: fit-content;
+  background-color: #0d67ce;
+  border: 2px solid #84b8f8;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 0.3rem #09315f);
+  cursor: pointer;
+  margin: 0 10px;
+}
+.download_btn i {
+  margin: 0 10px 0 0;
+}
+
+/* ---------------- Movies Collection Section ------------------- */
+.movies_collection_container {
+  width: 100%;
+  margin: 0;
+  padding: 50px 0;
+}
+
+.movies_collection_flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movies_collection_flexbox div img {
+  width: 240px;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: center;
+  margin: 20px;
+  border: 3px solid #5292d3;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+
+.movies_collection_flexbox div img:hover {
+  transition: all 0.3s ease-out;
+  transform: scale(1.1);
+}
+
+/*--------------------- Catup Up page----------------------- */
+/*----------------- Catch Up Showcase Section--------- */
+.catch_up_showcase_outer_container {
+  width: 100%;
+  height: 400px;
+}
+
+.catch_up_showcase_inner_container {
+  position: relative;
+}
+
+.catch_up_showcase_inner_container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+.catch_up_showcase_content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 30px;
+  top: 20%;
+  width: 45%;
+  color: rgba(255, 255, 255, 1);
+}
+.catch_up_showcase_content h2 {
+  margin: 6px 0 6px 0;
+  line-height: 27px;
+}
+.catch_up_showcase_content p {
+  margin: 0;
+  width: 100%;
+}
+.catch_up_showcase_content img {
+  width: 75px;
+  height: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+/* --------------- Catch Up Collection Section -------------- */
+.catch_up_collection_container {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.catch_up_collection_flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catch_up_collection_flexbox div img {
+  max-width: 450px;
+  width: 340px;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: center;
+  margin: 20px 20px 7px 20px;
+  border: 3px solid #5292d3;
+  cursor: pointer;
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+}
+.catch_up_collection_flexbox div h5 {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 20px;
+  padding: 0;
+}
+
+.catch_up_collection_flexbox div img:hover {
+  transition: all 0.3s ease-out;
+  transform: scale(1.1);
+}
+/*--------------------- Media Queries------------------- */
+
+@media (min-width: 1600px) {
+  /* ------------- TV Guide Right Side Panel ---------------- */
+  /* .tv_guide_right_side_panel {
+    height: 100vh !important;
+  }
+  .tv_guide_showcase {
+    height: 45vh;
+  }
+  .show_schedule_section {
+    height: calc(100% - 160px);
+    overflow-y: auto;
+  }
+  .show_schedule_container {
+    position: relative;
+    height: 55vh;
+  }
+
+  .video_thumbnail iframe {
+    width: 58vh;
+    aspect-ratio: 16/9;
+  } */
+  /* .video_info h4 {
+    font-size: 46px;
+  }
+  .video_info p {
+    font-size: 28px;
+  }
+  .video_info span {
+    font-size: 28px;
+  }
+  .record_btn {
+    padding: 8px 20px;
+    font-size: 18px;
+  }
+  .record_btn span {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  .quality_tag {
+    font-size: 22px;
+    padding: 0 6px;
+    margin-right: 15px;
+  } */
+}
+@media (max-width: 1060px) {
+  .image_swiper_content {
+    width: 55%;
+  }
+  .apex_image {
+    height: 85px;
+    width: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .search_bar {
+    left: 0;
+    top: 7%;
+    width: 245px;
+  }
+  .apex_image {
+    height: 95px;
+    width: 145px;
+  }
+  /* -----------right-side---------------- */
+  .right-side-panel {
+    width: calc(100% - 38px);
+  }
+  .sidebar {
+    transform: translateX(-212px);
+    width: 250px;
+    z-index: 10;
+    transition: transform 0.3s ease-in;
+    background: hsla(209, 100%, 43%, 1);
+    background: linear-gradient(
+      -45deg,
+      hsla(212, 100%, 22%, 1) 0%,
+      hsla(209, 100%, 43%, 1) 100%
+    );
+
+    background: -moz-linear-gradient(
+      -45deg,
+      hsla(209, 100%, 43%, 1) 0%,
+      hsla(212, 100%, 22%, 1) 100%
+    );
+
+    background: -webkit-linear-gradient(
+      -45deg,
+      hsla(209, 100%, 43%, 1) 0%,
+      hsla(212, 100%, 22%, 1) 100%
+    );
+  }
+
+  .sidebar2 {
+    transition: transform 0.3s ease-in;
+    transform: translateX(0);
+  }
+
+  .channels_col {
+    line-height: 16px;
+    width: 180px;
+  }
+
+  .channels_heading {
+    width: 180px;
+  }
+  .shows_heading_outer_container {
+    width: calc(100% - 180px);
+  }
+  .shows_outer_container {
+    width: calc(100% - 180px);
+  }
+  .left_btn {
+    left: 190px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .right_btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  /* ------------TV Guide page------------ */
+  .tv_guide_right_side_panel {
+    height: max-content !important;
+  }
+  .tv_guide_showcase {
+    height: fit-content;
+  }
+  /* -----------------Apex Cinema Page--------------------- */
+  .movie_showcase_content {
+    top: 20%;
+    width: 55%;
+  }
+
+  /* -----------------Catch Up Page--------------------- */
+  .catch_up_showcase_content {
+    top: 20%;
+    width: 55%;
+  }
+}
+
+@media (max-width: 576px) {
+  .image_swiper_content {
+    padding: 20px 20px;
+    width: 70%;
+  }
+
+  .image_swiper_content h2 {
+    font-size: 30px;
+    font-size: bolder;
+    line-height: 32px;
+  }
+
+  .image_swiper_content p {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .multiple_image_swiper_container h3 {
+    font-size: 19px;
+    padding: 0 15px 0 15px;
+    margin-top: 60px;
+    line-height: 22px;
+  }
+  .hero_swiper_button_next {
+    right: 3px !important;
+    top: 8% !important;
+  }
+
+  .hero_swiper_button_prev {
+    left: calc(100% - 65px) !important;
+    top: 8% !important;
+  }
+
+  /*---------------------------- TV GUIDE PAGE-------------------------- */
+
+  /* ------------- TV Guide Right Side Panel ---------------- */
+  /* -------Video Section TV Guide ---------- */
+  .video_thumbnail iframe {
+    width: 65vw;
+    aspect-ratio: 16/9;
+  }
+  /* --------- Shows Schedule Container --------- */
+
+  .watch_mode-btn_container div {
+    padding: 6px 16px;
+  }
+
+  .weekdays_bar {
+    width: 100%;
+    height: 80px;
+    overflow-x: scroll;
+  }
+  /* -----------------Apex Cinema Page--------------------- */
+  .movie_showcase_content {
+    top: 13%;
+    width: 60%;
+    left: 12px;
+  }
+  .movie_showcase_content p {
+    width: 100%;
+    height: fit-content;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    transition: all 0.5s ease-in-out;
+  }
+  .movie_showcase_content p:hover {
+    width: 120%;
+    height: auto;
+    text-overflow: visible;
+    overflow: visible;
+    display: block !important;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .play-btn {
+    padding: 3px 12px;
+  }
+  .download_btn {
+    padding: 3px 11px;
+  }
+  .download_btn i {
+    margin: 0 8px 0 0;
+  }
+
+  /* ---------------Catch Up page------------- */
+  .catch_up_showcase_content {
+    top: 13%;
+    width: 70%;
+    left: 12px;
+  }
+  .catch_up_showcase_content p {
+    width: 100%;
+    height: fit-content;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    transition: all 0.5s ease-in-out;
+  }
+  .catch_up_showcase_content p:hover {
+    width: 120%;
+    height: auto;
+    text-overflow: visible;
+    overflow: visible;
+    display: block !important;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+@media (max-width: 400px) {
+  .channels_col {
+    line-height: 16px;
+    width: 140px;
+  }
+
+  .channels_heading {
+    width: 140px;
+  }
+  .shows_heading_outer_container {
+    width: calc(100% - 140px);
+  }
+  .shows_outer_container {
+    width: calc(100% - 140px);
+  }
+  .left_btn {
+    left: 145px;
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .right_btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  /* -----------------Apex Cinema Page--------------------- */
+  .movie_showcase_content_btns {
+    flex-direction: column;
+  }
+  .download_btn {
+    margin: 8px 0 0 0;
+  }
+
+  /*---------------- Catch up page---------------- */
+  .catch_up_collection_flexbox div img {
+    max-width: 300px;
+    width: 300px;
+    aspect-ratio: 16/9;
+  }
+}
